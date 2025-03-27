@@ -300,7 +300,6 @@ This portfolio has been tested and optimized for:
 
 - Chrome (latest 2 versions)
 - Firefox (latest 2 versions)
-- Safari (latest 2 versions)
 - Edge (latest version)
 - Mobile browsers (iOS Safari, Android Chrome)
 
@@ -341,7 +340,7 @@ For questions, issues, or contributions to this portfolio project:
 
 - Email: [jorammwanyika@gmail.com](mailto:jorammwanyika@gmail.com)
 - LinkedIn: [Joram Nyamawi Mwanyika](https://www.linkedin.com/in/joram-nyamawi-mwanyika-03b383282)
-- GitHub: [Joram-tech](https://github.com/Joram-tech)
+- GitHub: [JoramMwanyika](https://github.com/JoramMwanyika)
 - WhatsApp: +254794728645
 
 
