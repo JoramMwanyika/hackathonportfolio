@@ -30,6 +30,7 @@ This portfolio website serves as a professional showcase for Joram Mwanyika, fea
 - Skills and technical expertise visualization
 - Educational background
 - Work Experience
+- Volunteering
 - Project showcase with detailed descriptions
 - Personal interests
 - Contact form with database integration (Not fully integrated)
