@@ -29,9 +29,10 @@ This portfolio website serves as a professional showcase for Joram Mwanyika, fea
 - Professional introduction and biography
 - Skills and technical expertise visualization
 - Educational background
+- Work Experience
 - Project showcase with detailed descriptions
 - Personal interests
-- Contact form with database integration
+- Contact form with database integration (Not fully integrated)
 - Resume download functionality
 - Social media integration
 
@@ -81,7 +82,7 @@ The design follows modern web standards with a focus on responsiveness, accessib
 ## File Structure
 
 ```plaintext
-joram-portfolio/
+hackathon-portfolio/
 ├── index.html              # Main HTML document
 ├── css/
 │   └── style.css           # CSS stylesheet
@@ -108,8 +109,8 @@ joram-portfolio/
 1. **Clone the repository**:
 
 ```shellscript
-git clone https://github.com/Joram-tech/portfolio.git
-cd portfolio
+https://github.com/JoramMwanyika/hackathonportfolio.git
+cd hackathonportfolio
 ```
 
 
@@ -329,7 +330,7 @@ The following optimizations have been implemented:
 2. Minimal DOM nesting for improved rendering
 
 
-
+Here is the link to my hosted portfolio, feel free to go through it: [portfolio](https://startling-malabi-df7f5b.netlify.app/)
 
 
 ## Contact
