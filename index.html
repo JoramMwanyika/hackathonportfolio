@@ -6,6 +6,8 @@
     <title>Joram Mwanyika | Automation Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Joram Mwanyika's portfolio - Automation Specialist focusing on streamlining business operations with no-code/low-code automation tools">
+    <meta name="keywords" content="automation, specialist, portfolio, no-code, low-code, web development">
 </head>
 <body>
     <!-- Navigation -->
@@ -21,6 +23,9 @@
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#interests" class="nav-link">Interests</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -28,9 +33,9 @@
     <!-- Introduction Section -->
     <header id="introduction" class="introduction">
         <div class="intro-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+            <div class="shape shape-1 parallax" data-speed="0.05"></div>
+            <div class="shape shape-2 parallax" data-speed="0.07"></div>
+            <div class="shape shape-3 parallax" data-speed="0.09"></div>
         </div>
         <div class="container">
             <div class="intro-content">
@@ -70,14 +75,14 @@
                 <div class="my-image">
                     <div class="profile-container">
                         <img src="assets/profile.jpg" alt="Joram Mwanyika" class="profile-image">
-                        <div class="profile-blob"></div>
+                        <div class="profile-blob parallax" data-speed="-0.03"></div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- About Section -->
         <section id="about" class="section about-section">
             <div class="container">
@@ -142,7 +147,7 @@
                                     <span>85%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div class="skill-progress" data-percentage="85%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -151,7 +156,7 @@
                                     <span>80%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <div class="skill-progress" data-percentage="80%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -160,7 +165,7 @@
                                     <span>70%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 70%"></div>
+                                    <div class="skill-progress" data-percentage="70%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -169,7 +174,7 @@
                                     <span>75%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 75%"></div>
+                                    <div class="skill-progress" data-percentage="75%"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -178,7 +183,7 @@
                                     <span>65%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 65%"></div>
+                                    <div class="skill-progress" data-percentage="65%"></div>
                                 </div>
                             </div>
                         </div>
@@ -236,10 +241,10 @@
         <section id="experience" class="section experience-section">
             <div class="container">
                 <div class="section-header">
-                    <h6 class="section-subtitle" data-aos="fade-up">My Journey</h6>
-                    <h3 class="section-title" data-aos="fade-up" data-aos-delay="100">Work Experience</h3>
+                    <h6 class="section-subtitle">My Journey</h6>
+                    <h3 class="section-title">Work Experience</h3>
                 </div>
-                <div class="experience-timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="experience-timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -423,9 +428,17 @@
                     <h3 class="section-title">Featured Projects</h3>
                 </div>
                 
+                <!-- Project filters
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="automation">Automation</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div> -->
+
                 <div class="projects-wrapper">
                     <!-- Project 1 -->
-                    <div class="project-card active" id="project1">
+                    <div class="project-card active" id="project1" data-category="web">
                         <div class="project-content">
                             <div class="project-info">
                                 <h4 class="project-title">Automated Patient Appointment System</h4>
@@ -458,7 +471,7 @@
                     </div>
                     
                     <!-- Project 2 -->
-                    <div class="project-card" id="project2" style="display: block; margin-top: 30px;">
+                    <div class="project-card" id="project2" data-category="automation" style="display: block; margin-top: 30px;">
                         <div class="project-content">
                             <div class="project-info">
                                 <h4 class="project-title">Addiction Solver App</h4>
@@ -627,7 +640,7 @@
                     </div>
                     
                     <div class="contact-form-wrapper">
-                        <form id="contactForm" class="contact-form" action="submit_form.html" method="POST">
+                        <form id="contactForm" class="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Name</label>
@@ -671,5 +684,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
