@@ -5,6 +5,9 @@ const particleCount = 50
 let customCursor
 let cursorDot
 
+// Initialize EmailJS with your public key
+emailjs.init("C97oLWXQYg2Bm-1IP") 
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize all features
   initMobileNavigation()
@@ -136,30 +139,51 @@ function initFormValidation() {
       })
     })
 
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault()
 
       // Animate form submission
       contactForm.classList.add("submitting")
 
       if (validateForm()) {
-        // Show success message with animation
-        showFormMessage("success", "Thank you! Your message has been sent successfully.")
+        try {
+          // Get form data
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+          }
 
-        // Store form data in localStorage
-        saveFormData()
+          // Send email using EmailJS
+          await emailjs.send(
+            "service_l7q3vtd",
+            "template_4a0hmsx",
+            formData
+          )
 
-        // Reset form after animation completes
-        setTimeout(() => {
-          contactForm.classList.remove("submitting")
-          contactForm.classList.add("submitted")
+          // Show success message with animation
+          showFormMessage("success", "Thank you! Your message has been sent successfully.")
 
+          // Store form data in localStorage
+          saveFormData()
+
+          // Reset form after animation completes
           setTimeout(() => {
-            contactForm.reset()
-            localStorage.removeItem("contactFormData")
-            contactForm.classList.remove("submitted")
+            contactForm.classList.remove("submitting")
+            contactForm.classList.add("submitted")
+
+            setTimeout(() => {
+              contactForm.reset()
+              localStorage.removeItem("contactFormData")
+              contactForm.classList.remove("submitted")
+            }, 1000)
           }, 1000)
-        }, 1000)
+        } catch (error) {
+          console.error("Error sending email:", error)
+          showFormMessage("error", "Sorry, there was an error sending your message. Please try again.")
+          contactForm.classList.remove("submitting")
+        }
       } else {
         // Show error animation
         contactForm.classList.add("validation-error")
