@@ -634,6 +634,35 @@ body.page-loaded {
   }
 }
 
+/* Profile Image Enhancement */
+.profile-image {
+  border-radius: 20px;
+  filter: contrast(1.1) brightness(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(126, 34, 206, 0.2);
+}
+
+.profile-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(126, 34, 206, 0.3);
+}
+
+/* Role Animation */
+.role-text {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: changeRole 9s infinite;
+}
+
+@keyframes changeRole {
+  0%, 30% { content: "Automation Specialist"; }
+  33%, 63% { content: "Software Developer"; }
+  66%, 100% { content: "Web Developer"; }
+}
+
 /* About Section */
 .about-content {
   max-width: 900px;
